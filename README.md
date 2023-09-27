@@ -21,6 +21,8 @@ The function is intended to be run using a Time trigger. The domain must be pass
 * The *config.py* file is not provided, as you may already have your own configuration file/system (perhaps even using the enviroment variables of the FC). Just replace the config.config dictionary members with your own cofiguration parameters.
 * A sample *Dockerfile* in provided, which you might adjust to your use case.
 * A sample *requirements.txt* file is provided, which you might adjust to your use case.
+* The FC checks the expiration time of the certificate, to verify if it must be processed.
+* The *--test-cert* flag is passed to certbot. This is done mainly for testing, and should be removed for production.
 
 ## License
 
