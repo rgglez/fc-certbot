@@ -11,8 +11,8 @@ This function uses the [Alibaba Cloud DNS](https://www.alibabacloud.com/product/
 service to authenticate the domain with Let's Encrypt. Your account must have access
 to this service, and you must use these enviroment variables to pass the credentials:
 
-*AUTH_ACCESSKEY_ID*
-*AUTH_ACCESSKEY_SECRET*
+* *AUTH_ACCESSKEY_ID*
+* *AUTH_ACCESSKEY_SECRET*
 
 The function is intended to be run using a Time trigger. The domain must be passed in the Trigger Message.
 
