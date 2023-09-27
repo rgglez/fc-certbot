@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/rgglez/fc-certbot) 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/rgglez/fc-certbot)
 
-Function Compute to update SSL certificates from [https://letsencrypt.org/es/](Lets Encrypt).
+Function Compute to update SSL certificates from [Let's Encrypt](https://letsencrypt.org/es/).
 
 This function uses the [Alibaba Cloud DNS](https://www.alibabacloud.com/product/dns) 
 service to authenticate the domain with Let's Encrypt. Your account must have access
