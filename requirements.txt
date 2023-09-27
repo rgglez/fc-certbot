@@ -1,0 +1,9 @@
+simplejson
+pyyaml
+oss2
+rich
+pyyaml
+simplejson
+certbot
+certbot-dns-aliyun
+pyopenssl

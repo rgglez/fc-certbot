@@ -1,6 +1,7 @@
+"""
 BSD 3-Clause License
 
-Copyright (c) 2021, Rodolfo González González
+Copyright (c) 2023, Rodolfo González González
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -26,3 +27,35 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+"""
+
+import os
+import sys
+import simplejson as json
+
+from rich.pretty import pprint
+
+from certbotp import Certbotp
+
+###############################################################################
+
+try:
+    cb = Certbotp()
+    config = cb.config
+except Exception as ex:
+    pprint(ex)
+    sys.exit("Can not init script")
+
+###############################################################################
+
+if __name__ == '__main__':
+    try:
+        event = json.loads(os.environ['FC_CUSTOM_CONTAINER_EVENT'])
+        domain = event['payload'].strip()
+
+        print("Processing " + domain)
+
+        cb.certbot(domain)
+    except Exception as ex:
+        pprint(ex)
+# main
